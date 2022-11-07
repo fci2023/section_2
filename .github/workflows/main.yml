@@ -10,5 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: "Login"
+        run: docker login --username ${{ secrets.USERNAME }} --password ${{ secrets.TOKEN }}
+
       - name: "Build docker image"
-        run: dockhjnyfnhger build -t grig .
+        run: docker build -t grig .
