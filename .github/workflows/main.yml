@@ -1,1 +1,15 @@
+on:
+  push:
+    branches:
+      - master
 
+jobs:
+  build:
+    runs-on: Ubuntu-latest
+
+    steps:
+      - name: "List all files"
+        run: ls
+
+      - name: "PWD"
+        run: pwd
