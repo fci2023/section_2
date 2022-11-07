@@ -8,10 +8,7 @@ jobs:
     runs-on: Ubuntu-latest
 
     steps:
-      - name: "List all files"
-        run: ls
-
       - uses: actions/checkout@v3
 
-      - name: "List all files"
-        run: ls
+      - name: "Build docker image"
+        run: docker build -t grig .
